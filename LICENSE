@@ -1,0 +1,103 @@
+Guild Manager - Source-Available License
+=========================================
+
+Copyright (c) 2026 Veronica-Vasilieva. All rights reserved.
+
+This software (the "Addon") is published as source-available, not as
+open source. The source code is visible so that players can audit what
+runs in their game client. It is not a grant of permission to copy,
+redistribute, modify, fork, or sublicense the work.
+
+
+1. PERMITTED USE
+
+You are permitted to:
+
+  a. Download the Addon and install it into a personal copy of the World
+     of Warcraft client for the purpose of playing the game.
+
+  b. Read and study the source code for personal educational purposes.
+
+  c. Submit bug reports, feedback, and feature suggestions via the
+     project's issue tracker.
+
+  d. Submit pull requests to the original repository. By submitting a
+     pull request you grant the copyright holder a perpetual,
+     irrevocable, royalty-free license to incorporate your contribution
+     into the Addon under the terms of this License. You retain
+     copyright of your contribution.
+
+
+2. RESTRICTIONS
+
+Without prior written permission from the copyright holder you may NOT:
+
+  a. Redistribute the Addon, in whole or in part, in source or compiled
+     form, by any means, including (but not limited to) websites, addon
+     directories, file-sharing networks, private servers' install
+     bundles, and physical media.
+
+  b. Publish a fork or derivative of the Addon intended for use by
+     anyone other than yourself, on any platform (including code
+     hosting services such as GitHub, GitLab, Bitbucket, or any
+     successor service).
+
+  c. Incorporate any portion of the source code or assets into another
+     project, addon, or product, whether free or paid.
+
+  d. Sell, license, sublicense, lease, rent, or otherwise commercially
+     exploit the Addon or any derivative.
+
+  e. Remove, alter, conceal, or replace the author attribution in
+     the source code, in the in-game user interface, in the TOC
+     metadata, or in any redistribution that has been individually
+     authorized in writing.
+
+  f. Use the Addon's name, the author's name, or any associated
+     branding in a way that suggests endorsement of, or association
+     with, another product or service without permission.
+
+
+3. NO WARRANTY
+
+The Addon is provided "as is", without warranty of any kind, express
+or implied. The copyright holder makes no representations regarding
+fitness for any purpose, merchantability, non-infringement, or that
+the Addon is free of bugs, errors, or harmful behaviour. You assume
+all risk arising from its use.
+
+
+4. LIMITATION OF LIABILITY
+
+To the maximum extent permitted by applicable law, the copyright
+holder shall not be liable for any direct, indirect, incidental,
+special, exemplary, or consequential damages arising out of the use
+or inability to use the Addon, even if advised of the possibility of
+such damages.
+
+
+5. TERMINATION
+
+Your rights under this License terminate automatically and without
+notice if you breach any of its terms. Upon termination you must
+cease all use of the Addon and destroy all copies in your possession.
+
+Termination of your rights does not limit any other remedy the
+copyright holder may seek for the breach.
+
+
+6. RESERVATION OF RIGHTS
+
+All rights not expressly granted by this License are reserved by the
+copyright holder.
+
+
+7. LICENSING REQUESTS
+
+To request a license to redistribute, fork, or incorporate this
+Addon, open an issue on the project's repository describing your
+intended use. Permission, if granted, will be issued in writing as
+an addendum to this License.
+
+
+END OF LICENSE

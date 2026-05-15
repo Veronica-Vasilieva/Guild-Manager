@@ -1,0 +1,23 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*.bak
+*~
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Local test / scratch files
+scratch/
+TODO.local
+*.local.lua
+
+# WoW client artefacts that should never live in source
+*.log
+WTF/
+Cache/
