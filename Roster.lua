@@ -127,7 +127,12 @@ local function refreshPanel()
     local canPub = CanEditPublicNote and CanEditPublicNote()
     local canOff = CanEditOfficerNote and CanEditOfficerNote()
 
-    panel.noteEdit:SetText(info.note)
+    -- IMPORTANT: only overwrite the EditBox text when the user is NOT typing in
+    -- it. The panel runs a periodic refresh poller, and calling SetText on an
+    -- EditBox that has focus will wipe whatever the user has typed so far.
+    if not panel.noteEdit:HasFocus() then
+        panel.noteEdit:SetText(info.note)
+    end
     if canPub then
         panel.noteEdit:EnableMouse(true)
         panel.noteEdit:EnableKeyboard(true)
@@ -138,7 +143,9 @@ local function refreshPanel()
         panel.noteEdit:SetTextColor(0.6, 0.6, 0.6)
     end
 
-    panel.officerEdit:SetText(info.officerNote)
+    if not panel.officerEdit:HasFocus() then
+        panel.officerEdit:SetText(info.officerNote)
+    end
     if canOff then
         panel.officerEdit:EnableMouse(true)
         panel.officerEdit:EnableKeyboard(true)
