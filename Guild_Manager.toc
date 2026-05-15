@@ -2,7 +2,7 @@
 ## Title: |cFFFFCC00Guild Manager|r
 ## Notes: Lightweight Wrath 3.3.5a guild tracker - Roster, Event Log, Alts, Macros
 ## Author: Veronica-Vasilieva
-## Version: 1.0.1
+## Version: 1.0.2
 ## X-License: All Rights Reserved - see LICENSE
 ## SavedVariables: GuildManagerDB
 ## SavedVariablesPerCharacter: GuildManagerCharDB

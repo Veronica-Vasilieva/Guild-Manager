@@ -255,7 +255,7 @@ local function buildPanel()
         local idx = findRosterIndex(currentName)
         if idx and CanEditPublicNote and CanEditPublicNote() then
             GuildRosterSetPublicNote(idx, self:GetText() or "")
-            GuildRoster()
+            if addon.RequestRoster then addon:RequestRoster() else GuildRoster() end
         end
         self:ClearFocus()
     end)
@@ -270,7 +270,7 @@ local function buildPanel()
         local idx = findRosterIndex(currentName)
         if idx and CanEditOfficerNote and CanEditOfficerNote() then
             GuildRosterSetOfficerNote(idx, self:GetText() or "")
-            GuildRoster()
+            if addon.RequestRoster then addon:RequestRoster() else GuildRoster() end
         end
         self:ClearFocus()
     end)

@@ -315,6 +315,21 @@ local function scheduleDiff()
 end
 
 -- =========================================================
+-- Roster request helper
+-- Always force the server-side "show offline" filter on before asking
+-- for data. The Blizzard guild window has its own checkbox for this
+-- and toggling it off would otherwise hide offline members from us
+-- entirely, breaking last-seen tracking and leave-detection.
+-- Our UI's "Show Offline" toggle still controls *display* filtering.
+-- =========================================================
+function addon:RequestRoster()
+    if SetGuildRosterShowOffline then
+        SetGuildRosterShowOffline(true)
+    end
+    GuildRoster()
+end
+
+-- =========================================================
 -- Events
 -- =========================================================
 local eventFrame = CreateFrame("Frame")
@@ -326,17 +341,25 @@ eventFrame:SetScript("OnEvent", function(self, event)
     ensureDB()
     if event == "PLAYER_LOGIN" or event == "PLAYER_ENTERING_WORLD" then
         if IsInGuild() then
-            GuildRoster()
+            addon:RequestRoster()
         end
     elseif event == "PLAYER_GUILD_UPDATE" then
         if IsInGuild() then
-            GuildRoster()
+            addon:RequestRoster()
         else
             currentGuildKey = nil
             lastSnapshot = nil
         end
     elseif event == "GUILD_ROSTER_UPDATE" then
         if IsInGuild() then
+            -- Re-assert the show-offline flag in case the user just toggled
+            -- the Blizzard checkbox; the resulting GUILD_ROSTER_UPDATE will
+            -- have given us a partial list. Force-true and re-fetch.
+            if SetGuildRosterShowOffline and not GetGuildRosterShowOffline() then
+                SetGuildRosterShowOffline(true)
+                GuildRoster()
+                return
+            end
             scheduleDiff()
         end
     end
